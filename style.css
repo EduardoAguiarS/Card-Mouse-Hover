@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+/*Body*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('img/lucas-benjamin-R79qkPYvrcM-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*Container*/
+.container-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container-card .card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.4);
+    border-left: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.container-card .card .content {
+    padding: 20px;
+    transform: translateX(100px);
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+
+.container-card .card:hover .content{
+    transform: translateY(0); 
+    opacity: 1;
+}
+
+.container-card .card .content h2 {
+    position: absolute;
+    top: -120px;
+    right:30px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+.container-card .card .content h3 {
+    font-size: 1.8em;
+    color: white;
+    z-index: 1;
+
+}
+
+.container-card .card .content p {
+    font-size: 1em;
+    color: white;
+    font-weight: 400;
+}
+
+.container-card .card .content a {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+    background: white;
+    color: black;
+    border-radius: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 8px 18px;
+    text-decoration: none;
+    font-weight: 600;
+}
